@@ -294,7 +294,7 @@ const serviceObserver = new IntersectionObserver((entries) => {
 
 // Observe all animation elements
 document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+    const animatedElements = document.querySelectorAll('.fade-in');
     animatedElements.forEach(el => observer.observe(el));
 
     const serviceSection = document.querySelector('.service-grid');
