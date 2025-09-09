@@ -293,12 +293,12 @@ const serviceObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 // Observe all animation elements
-document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.fade-in');
-    animatedElements.forEach(el => observer.observe(el));
+// document.addEventListener('DOMContentLoaded', () => {
+//     const animatedElements = document.querySelectorAll('.fade-in');
+//     animatedElements.forEach(el => observer.observe(el));
 
-    const serviceSection = document.querySelector('.service-grid');
-    if (serviceSection) {
-        serviceObserver.observe(serviceSection);
-    }
-});
+//     const serviceSection = document.querySelector('.service-grid');
+//     if (serviceSection) {
+//         serviceObserver.observe(serviceSection);
+//     }
+// });
