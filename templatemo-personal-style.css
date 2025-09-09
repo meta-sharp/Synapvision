@@ -153,8 +153,10 @@
             line-height: 1.7;
             color: var(--text-primary);
             scroll-behavior: smooth;
-            overflow-x: hidden;
+            overflow-x: hidden !important;
             background: var(--bg-primary);
+            margin-left: 0 !important;
+            margin-right: 0 !important;
         }
 
         /* Navigation */
