@@ -1286,6 +1286,7 @@
             opacity: 0;
             transform: translateX(-60px);
             transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
         }
 
         .slide-in-left.animate {
@@ -1405,6 +1406,11 @@
         }
 
 
+        .services {
+            background: #f8fafc;
+        }
+
+
 
         .service-item {
             background: var(--bg-card);
@@ -1428,10 +1434,63 @@
         .service-item.animate {
             transform: translateY(0);
             opacity: 1;
-            overflow-x: hidden;
         }
 
         .service-item:hover {
             transform: translateY(-15px);
             box-shadow: var(--shadow-2xl);
+        }
+
+        /* Services Grid - Custom CSS Grid */
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin: 0;
+        }
+
+        /* Service Grid Responsive Breakpoints */
+        @media (min-width: 640px) {
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .service-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Service Item Content Styling */
+        .service-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .service-content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .service-content p {
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .service-image {
+            height: 60px;
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-image img {
+            max-width: 100%;
+            height: auto;
         }
