@@ -879,7 +879,7 @@
         .about-image {
             width: 100%;
             height: 500px;
-            background: url('images/about-image.jpg') center/cover;
+            background: url('images/about-image.png') center/cover;
             border-radius: 30px;
             position: relative;
             overflow: hidden;
