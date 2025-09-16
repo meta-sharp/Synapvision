@@ -1089,6 +1089,94 @@
             color: var(--text-light);
         }
 
+        /* team*/
+/* ================= TEAM SECTION ================= */
+.team {
+    background: var(--bg-primary, #f9fafb); /* fallback if Tailwind class not applied */
+}
+
+.team .section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--text-primary, #1f2937);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.team .section-title::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color, #6366f1);
+    display: block;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+/* Card Styling */
+.team-member {
+    background: var(--bg-card, #fff);
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    box-shadow: var(--shadow-lg, 0 10px 25px rgba(0, 0, 0, 0.08));
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s ease;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.team-member.animate {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.team-member:hover {
+    transform: translateY(-12px);
+    box-shadow: var(--shadow-2xl, 0 20px 40px rgba(0, 0, 0, 0.15));
+}
+
+/* Image Styling */
+.team-member img {
+    border: 4px solid var(--primary-color, #6366f1);
+    transition: all 0.3s ease;
+}
+
+.team-member:hover img {
+    transform: scale(1.05);
+    border-color: var(--secondary-color, #8b5cf6);
+}
+
+/* Text Styling */
+.team-member h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--text-primary, #111827);
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: var(--text-secondary, #6b7280);
+}
+
+/* Fade-in animation */
+.fade-in {
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
         /* Contact Section */
         .contact {
             background: linear-gradient(135deg, #3b4cb8 0%, #4a2c65 50%, #9c35a8 100%);
